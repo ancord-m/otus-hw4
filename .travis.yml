@@ -1,7 +1,13 @@
 dist: xenial
 language: cpp
 compiler:
- - clang
+ - gcc
+addons:
+ apt:
+  sources:
+    - ubuntu-toolchain-r-test
+  packages:
+    - g++-7
 script:
  - cmake .
  - cmake --build .
