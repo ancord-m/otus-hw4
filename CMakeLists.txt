@@ -1,10 +1,8 @@
 cmake_minimum_required(VERSION 3.5)
 
-if(ENV{TRAVIS_BUILD_NUMBER})
-	project(print_ip VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
-else()
-	project(print_ip VERSION 0.0.1)
-endif()
+set(ENV{TRAVIS_BUILD_NUMBER} 1)
+
+project(print_ip VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 set(INCLUDE_DIR include)
 

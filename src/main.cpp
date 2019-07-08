@@ -7,14 +7,9 @@ int main(int argc, const char* argv[])
 	print_ip(int(2130706433));
 	print_ip(long(8875824491850138409));
 	print_ip(std::string("127.0.0.1"));
-	//print_ip(vector)
-	//print_ip(list)
+	print_ip(std::vector<int>{192, 168, 8, 1});
+	print_ip(std::list<int>{234, 99, 31, 39, 12});
 	//print_ip(tuple)
-
-	char b = 255;
-	std::make_unsigned_t<char> ua = b;
-
-	std::cout << ua << std::endl;
 
 	return 0;
 }
