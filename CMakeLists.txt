@@ -4,6 +4,8 @@ project(print_ip)
 
 if(ENV{TRAVIS_BUILD_NUMBER})
 	set_target_properties(print_ip VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
+else()
+	set_target_properties(print_ip VERSION 0.0.1)
 endif()
 
 set(INCLUDE_DIR include)
