@@ -7,7 +7,9 @@
 #include <list>
 #include <tuple>
 
-
+/**
+	@brief The simpliest print_ip for stringt
+*/
 void print_ip(const std::string& ip)
 {
 	std::cout << ip << std::endl;
