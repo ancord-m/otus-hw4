@@ -51,25 +51,27 @@ print_ip(const IP_TYPE& ip)
 	std::cout << std::endl;
 }
 
+/* for tuple */
+
+template<typename T, typename... Args>
+struct are_tuple_types_same { };
+
 template<typename T>
-struct are_tuple_types_same
-{
-	static const bool value = true;
-};
+struct are_tuple_types_same<T> : std::true_type {};
 
 template<typename T, typename U, typename... Args>
-struct are_tuple_types_same
+struct are_tuple_types_same<T, U, Args...>
 {
-	static const bool value = std::is_same_v<T, U>;
+	static const bool value = std::is_same_v<T, U> && are_tuple_types_same<U, Args...>::value;
 };
+
 
 
 template<typename T, typename... Args>
 void print_tuple(T ip_part, Args... other_parts)
 {
-	std::cout << "Tuple" << std::endl;
+	std::cout << __PRETTY_FUNCTION__ << std::endl;
 }
-
 
 template<typename... Args>
 std::enable_if_t<

@@ -9,7 +9,7 @@ int main(int argc, const char* argv[])
 	print_ip(std::string("127.0.0.1"));
 	print_ip(std::vector<int>{192, 168, 8, 1});
 	print_ip(std::list<int>{234, 99, 31, 39, 720});*/
-	print_ip(std::make_tuple(12240));
+	print_ip(std::make_tuple(120, 40, 120, 431, 748, 1));
 
 	return 0;
 }
