@@ -65,13 +65,26 @@ struct are_tuple_types_same<T, U, Args...>
 	static const bool value = std::is_same_v<T, U> && are_tuple_types_same<U, Args...>::value;
 };
 
-
-
-template<typename T, typename... Args>
-void print_tuple(T ip_part, Args... other_parts)
+template<size_t cur_index, size_t tuple_size, typename... Args>
+struct print_tuple
 {
-	std::cout << __PRETTY_FUNCTION__ << std::endl;
-}
+    void operator()(const std::tuple<Args...>& ip_parts)
+    {
+        if (cur_index != 0) std::cout << ".";
+        
+        std::cout << std::get<cur_index>(ip_parts);
+        print_tuple<cur_index + 1, tuple_size, Args...>{}(ip_parts);
+    }
+};
+
+template<size_t tuple_size, typename... Args>
+struct print_tuple<tuple_size, tuple_size, Args...>
+{
+    void operator()(const std::tuple<Args...>& ip_parts)
+    {
+        std::cout << std::endl;
+    }
+};
 
 template<typename... Args>
 std::enable_if_t<
@@ -79,7 +92,11 @@ std::enable_if_t<
 	void>
 print_ip(const std::tuple<Args...>& ip)
 {
-	print_tuple(ip);
+	print_tuple<
+		0,
+		std::tuple_size_v<std::remove_reference_t<decltype(ip)>>,
+		Args...
+	> {} (ip);	
 }
 
 #endif /* PRINT_H */
