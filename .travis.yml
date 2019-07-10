@@ -19,6 +19,7 @@ script:
  - cmake .
  - cmake --build . --target package
  - doxygen Doxyfile
+ - ls -a
 deploy:
  - provider: script
    skip_cleanup: true
@@ -28,6 +29,6 @@ deploy:
    skip_cleanup: true
    github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
    keep_history: true
-   local_dir: ./build/docs/html
+   local_dir: ./docs/html
    on:
     branch: master
