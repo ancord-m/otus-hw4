@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>print_ip: Реализация метафункции печати условного IP-адреса</title>
+<title>print_ip: are_tuple_types_same&lt; T, U, Args... &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -38,8 +38,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -59,7 +59,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -74,13 +81,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="structare__tuple__types__same_3_01T_00_01U_00_01Args_8_8_8_01_4-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Реализация метафункции печати условного IP-адреса </div>  </div>
+<div class="title">are_tuple_types_same&lt; T, U, Args... &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Реализовать функцию печати условного ip-адреса. Адрес может быть представлен в виде произвольного целочисленного типа. Представление не зависит от знака типа. Выводить побайтово начиная со старшего с символом . в качестве разделителя. Адрес может быть представлен в виде строки. Выводится как есть. Адрес может быть представлен в виде контейнеров std::list, std::vector. Выводится содержимое контейнера поэлементно и разделяется . (одним символом точка). Опционально адрес может быть представлен в виде std::tuple при условии, что все типы одинаковы. Выводится содержимое поэлементно и разделяется . (одним символом точка). </p>
-</div></div><!-- contents -->
+
+<p><code>#include &lt;<a class="el" href="print_8h_source.html">print.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:afeac91f01b1cdf280b527d77de7c19b5"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structare__tuple__types__same_3_01T_00_01U_00_01Args_8_8_8_01_4.html#afeac91f01b1cdf280b527d77de7c19b5">value</a> = std::is_same_v&lt;T, U&gt; &amp;&amp; <a class="el" href="structare__tuple__types__same.html">are_tuple_types_same</a>&lt;U, Args...&gt;::value</td></tr>
+<tr class="separator:afeac91f01b1cdf280b527d77de7c19b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="afeac91f01b1cdf280b527d77de7c19b5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename U , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool <a class="el" href="structare__tuple__types__same.html">are_tuple_types_same</a>&lt; T, U, Args... &gt;::value = std::is_same_v&lt;T, U&gt; &amp;&amp; <a class="el" href="structare__tuple__types__same.html">are_tuple_types_same</a>&lt;U, Args...&gt;::value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>include/<a class="el" href="print_8h_source.html">print.h</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
